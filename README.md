@@ -2,7 +2,8 @@
 화이팅!
 
 ## History
-- (KST) 10월 18일 화요일 08:30: 첫모임
+- [Week1] 10월 19일 수요일 9:00 - 9:30 (KST)
+  Link: https://docs.google.com/document/d/1SeP8GmLL49WOiIyC3Y04h7c6ElZrAwCCF3_WYTxt2zA/edit?usp=sharing
 
 # References
 
