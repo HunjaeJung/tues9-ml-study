@@ -17,5 +17,6 @@
 - [Kaggle - Outbrain Click Prediction ](https://www.kaggle.com/c/outbrain-click-prediction)
 - [Kaggle - Titanic](https://www.kaggle.com/c/titanic)
 - [Python - 원경/헌재 파이썬 데이터 분석 기초 정리](https://github.com/LyuGGang/python-data-analytics-lecture)
-
-
+- [프로그래밍 관련 Google 추천 강의](https://www.google.com/about/careers/students/guide-to-technical-development.html)
+- [거북이 수학](http://ghebook.blogspot.jp/search/label/%EC%88%98%ED%95%99)
+- [머신러닝 관련 EBook 모음 - Best 12 free ebooks for machine learning](http://www.dzineflip.com/12-best-free-ebooks-for-machine-learning/)
