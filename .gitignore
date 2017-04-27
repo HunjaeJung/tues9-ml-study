@@ -1,3 +1,5 @@
 CourseraCourse/Donutt/tensorflow/venv/*
 CourseraCourse/Donutt/tensorflow/.idea/*
 *.mat
+*.csv
+*.txt
