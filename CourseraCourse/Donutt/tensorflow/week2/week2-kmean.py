@@ -82,6 +82,7 @@ class KMean():
 
     def run(self):
         dimension = self.x_data.shape[1]
+
         for i in range(10):
             self.addCentroid()
             self.centroid_data = self.computeMean(self.findClosestCentroids(), self.centroid_data.__len__(), dimension)
@@ -95,7 +96,7 @@ class KMean():
         # for i in min_distances_val.__iter__():
         #     print i
         #     __ret.append(centroid_data[i])
-        return np.array(centroid_data[min_distances_val])
+        return np.array(self.centroid_data[min_distances_val])
 
     def totalDistance(self):
         with tf.Session() as sess:
@@ -158,7 +159,7 @@ def drawKmean(X, tracked_centroid):
 # kMean = KMean(x_data, centroid_data)
 # kMean.run()
 # centroid_changed = kMean.getTrackedCentroid()
-#
+# #
 # drawKmean(x_data, centroid_changed)
 
 #### Quiver 실패!!!!
@@ -214,10 +215,14 @@ def drawImage(image_data, show=True):
 print x_data.shape
 # drawImage(x_data)
 
-compressed_color = 24
+compressed_color = 16
+loopcount = 5
+image_length_width = x_data.shape[0]
+image_length_height = x_data.shape[1]
 
 # normalize
-x_reshaped_data = x_data.reshape(128*128, 3)
+x_reshaped_data = x_data.reshape(image_length_width*image_length_height, 3)
+
 print x_reshaped_data.shape
 centroid_data = kMeanInitCentroid(x_reshaped_data, compressed_color)
 centroid_data = np.array(centroid_data, dtype=np.float32)
@@ -239,7 +244,7 @@ def runKmeanWithLoop(count):
         KMEAN_ARR.append(kMean.compressToCentroid())
 
     compressed_data = KMEAN_ARR[KMEAN_DIST_ARR.index(np.min(np.array(KMEAN_DIST_ARR)))]
-    compressed_data = compressed_data.reshape(128,128,3)
+    compressed_data = compressed_data.reshape(image_length_width,image_length_height,3)
     print compressed_data.shape
     # compressed_data = kMean.compressToCentroid()
     # compressed_data = compressed_data.reshape(128,128,3)
@@ -255,7 +260,7 @@ def runKmeanWithLoop(count):
 
     print compressed_data
     print x_data
-runKmeanWithLoop(5)
+runKmeanWithLoop(loopcount)
 
 # X = tf.placeholder(tf.float32)
 # Centroid = tf.placeholder(tf.float32)

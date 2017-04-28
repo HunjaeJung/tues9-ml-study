@@ -23,11 +23,11 @@ row = x_data.__len__()
 # row = 1 -> 난 costfunction 공식대로 했을뿐인데 (물론 최소화 하는과정에서 나누기는 아무런 영향을 미치지 않지만) row = 1로 주지 않는한 학습이 엄청나게 오래걸림. 데이터문젠가...
 # 근데 자세히보면 cost가 굉장히 큰걸 알수있다
 row = 1
-cost = tf.div(-tf.reduce_mean(y * tf.log(sig) + (1-y) * tf.log(1-sig)),row)
+cost = -tf.reduce_mean(y * tf.log(sig) + (1-y) * tf.log(1-sig))
 
 train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
 
-predicted = tf.cast(sig > 0.5, dtype=tf.float32)
+predicted = tf.cast(sig > 0.8, dtype=tf.float32)
 accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, y), dtype=tf.float32))
 
 def runLogi(x_data, y_data):
