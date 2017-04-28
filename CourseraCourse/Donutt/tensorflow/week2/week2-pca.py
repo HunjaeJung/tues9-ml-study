@@ -149,7 +149,7 @@ print sigma.shape
 print u.shape
 # drawFace(u[:,0: 100].T, 32)
 
-compress_k = 2
+compress_k = 20
 u_reduce_data = getReduceData(u, compress_k)
 print u_reduce_data.shape
 
